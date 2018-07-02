@@ -1,6 +1,6 @@
 {% set name = 'freetds' %}
 {% set version = "1.00.78" %}
-{% set sha256 = "b4376e685e6e133e5c4dc9b1099ddfc6cd264f5313ad5e4c26879f7ae9276194" %}
+{% set sha256 = "ae7d6b5d79f8bcef2aecc43f8522c0c7de152fc4352eac2a67af9585133dc037" %}
 
 package:
   name: {{ name }}
@@ -24,7 +24,6 @@ requirements:
     - openssl
     - unixodbc
     - readline  # [not win]
-    - toolchain
     - python  # [win]
     - vc   9  # [win and py27]
     - vc  10  # [win and py == 34]
