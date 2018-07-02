@@ -1,5 +1,5 @@
 {% set name = 'freetds' %}
-{% set version = "1.00.44" %}
+{% set version = "1.00.78" %}
 {% set sha256 = "b4376e685e6e133e5c4dc9b1099ddfc6cd264f5313ad5e4c26879f7ae9276194" %}
 
 package:
@@ -12,26 +12,25 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
-  features:
-    - vc9   # [win and py27]
-    - vc10  # [win and py == 34]
-    - vc14  # [win and py >= 35]
+  number: 0
   skip: True  # [win]
 
 requirements:
   build:
-    - openssl 1.0.*
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+  host:
+    - openssl
     - unixodbc
     - readline  # [not win]
     - toolchain
-    - cmake  # [win]
     - python  # [win]
     - vc   9  # [win and py27]
     - vc  10  # [win and py == 34]
     - vc  14  # [win and py >= 35]
   run:
-    - openssl 1.0.*
+    - openssl
     - unixodbc
     - readline  # [not win]
 
