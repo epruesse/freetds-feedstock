@@ -1,6 +1,6 @@
 {% set name = 'freetds' %}
-{% set version = "1.00.78" %}
-{% set sha256 = "897ba18783733efbf77f2f7470c4881170eb4309dca5df793c4846831f97d274" %}
+{% set version = "1.00.81" %}
+{% set sha256 = "a030d50a00f07fd9b640a22cabcbae97bb948bb2196510a34c133fe8bec2cb91" %}
 
 package:
   name: {{ name }}
