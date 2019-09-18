@@ -1,6 +1,6 @@
 {% set name = 'freetds' %}
-{% set version = "1.1rc3" %}
-{% set sha256 = "4d1356824fc9080b4672535ad1ece6c4e8693800669f8457a8a6f5a2783a4033" %}
+{% set version = "1.1.15" %}
+{% set sha256 = "ebeb9060bcfe54f13ab0fbf8cb72ac95cc6cefbe728a30247516d55334d66a03" %}
 
 package:
   name: {{ name }}
@@ -8,11 +8,11 @@ package:
 
 source:
   fn: freetds-{{ version }}.tar.gz
-  url: ftp://ftp.freetds.org/pub/freetds/stable/release_candidates/freetds-{{ version }}.tar.gz
+  url: ftp://ftp.freetds.org/pub/freetds/stable/freetds-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: True  # [win]
 
 requirements:
