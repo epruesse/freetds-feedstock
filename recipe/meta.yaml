@@ -17,12 +17,15 @@ build:
 
 requirements:
   build:
+    - gnuconfig  # [unix]
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - pkg-config
   host:
     - openssl
     - unixodbc
+    - libiconv
     - readline  # [not win]
   run:
     - openssl
@@ -32,8 +35,6 @@ requirements:
 test:
   commands:
     - tsql -C
-    - conda inspect linkages freetds  # [linux or osx]
-    - conda inspect objects freetds  # [osx]
 
 about:
   home: http://www.freetds.org/
