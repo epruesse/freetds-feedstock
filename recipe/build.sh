@@ -9,7 +9,7 @@ if [[ "${build_platform}" != "${target_platform}" ]]; then
   rm $PREFIX/bin/odbc_config
 fi
 
-./configure --prefix $PREFIX --with-unixodbc=$PREFIX --with-openssl=$PREFIX
+./configure --prefix $PREFIX --with-unixodbc=$PREFIX --with-openssl=$PREFIX || (cat config.log; exit 1)
 make
 # To run this check we need to have access to a mssql instance.
 # make check
