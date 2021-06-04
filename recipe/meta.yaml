@@ -24,6 +24,7 @@ requirements:
   host:
     - openssl
     - unixodbc
+    - libiconv
     - readline  # [not win]
   run:
     - openssl
