@@ -7,7 +7,7 @@ package:
 
 source:
   url: ftp://ftp.freetds.org/pub/freetds/stable/freetds-{{ version }}.tar.gz
-  sha256: ebeb9060bcfe54f13ab0fbf8cb72ac95cc6cefbe728a30247516d55334d66a03
+  sha256: 923dff0c8cf258ef33d661d71bf431ffb55218f14e0026f75d361951c2e92dbb
 
 build:
   number: 0
